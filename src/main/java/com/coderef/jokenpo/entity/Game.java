@@ -2,37 +2,46 @@ package com.coderef.jokenpo.entity;
 
 public abstract class Game {
 	
-	protected int life;
-	protected int damage;
-	protected int regeneration;
+	protected int size;
+	protected int weight;
+	protected int utility;
+	private int losses;
 	
 	public Game attack(Game game){
-		if(damageDifferenceAndRegeneration(this, game.damage) > damageDifferenceAndRegeneration(game, this.damage)) return this;
-		else return game;
+		sizeAttack(game);
+		sizeWeight(game);
+		sizeUtility(game);
+		return getWinner(game);
 	}
 	
-	private int damageDifferenceAndRegeneration(Game game, int damage){
-		
-		System.out.println(game.getClass());
-		
-		int result = damageDifference(game, damage);
-		return regeneration(game,result);
+	private void sizeAttack(Game game){
+		if(this.size > game.size) 
+			this.losses++;
+		else if(game.size > this.size) 
+			game.losses++;
 	}
 	
-	private int damageDifference(Game game, int damage){
-		return subtract(game.damage, damage);
+	private void sizeWeight(Game game){
+		if(this.weight > game.weight)
+			this.losses++;
+		else if(game.weight > this.weight)
+			game.losses++;
 	}
 	
-	private int subtract(int number1, int number2){
-		System.out.println("Difference");
-		System.out.println(number1 +" - " + number2);
-		return number1 - number2;
+	private void sizeUtility(Game game){
+		if(this.utility > game.utility)
+			this.losses++;
+		else if(game.utility > this.utility)
+			game.losses++;
 	}
 	
-	private int regeneration(Game game, int result){
-		System.out.println("Regeneration");
-		System.out.println(game.regeneration +" + " + result);
-		return game.regeneration + result;
+	private Game getWinner(Game game){
+		if(this.losses == game.losses)
+			return new Tie();
+		if(this.losses > game.losses)
+			return this;
+		else
+			return game;
 	}
-
+	
 }

@@ -3,8 +3,8 @@ package com.coderef.jokenpo.entity;
 public class Stone extends Game{
 
 	public Stone() {
-		life = 3;
-		damage = 7;
-		regeneration = 4;
+		size = 2;
+		weight = 4;
+		utility = 1;
 	}
 }

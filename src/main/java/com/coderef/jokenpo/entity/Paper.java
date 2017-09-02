@@ -3,8 +3,8 @@ package com.coderef.jokenpo.entity;
 public class Paper extends Game{
 
 	public Paper() {
-		life = 3;
-		damage = 7;
-		regeneration = 5;
+		size = 3;
+		weight = 1;
+		utility = 2;
 	}
 }
