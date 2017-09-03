@@ -17,10 +17,13 @@ public class GameTest {
 		test.startStoneXStone();
 		test.startPaperXPaper();
 		test.startScissorsXScissors();
+		
 		test.startStoneXPaper();
 		test.startPaperXStone();
+		
 		test.startStoneXScissors();
 		test.startScissorsXStone();
+		
 		test.startPaperXScissors();
 		test.startScissorsXPaper();
 	}
@@ -36,7 +39,7 @@ public class GameTest {
 	@Test
 	public void startPaperXPaper(){
 		Play play = new Play();
-		Game game = play.start(new Stone(), new Stone());
+		Game game = play.start(new Paper(), new Paper());
 		
 		System.out.println(game.getClass().getSimpleName());
 	}
@@ -44,7 +47,7 @@ public class GameTest {
 	@Test
 	public void startScissorsXScissors(){
 		Play play = new Play();
-		Game game = play.start(new Stone(), new Stone());
+		Game game = play.start(new Scissors(), new Scissors());
 		
 		System.out.println(game.getClass().getSimpleName());
 	}

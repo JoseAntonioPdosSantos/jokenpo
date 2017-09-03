@@ -9,8 +9,8 @@ public abstract class Game {
 	
 	public Game attack(Game game){
 		sizeAttack(game);
-		sizeWeight(game);
-		sizeUtility(game);
+		weightAttack(game);
+		utilityAttack(game);
 		return getWinner(game);
 	}
 	
@@ -21,14 +21,14 @@ public abstract class Game {
 			game.losses++;
 	}
 	
-	private void sizeWeight(Game game){
+	private void weightAttack(Game game){
 		if(this.weight > game.weight)
 			this.losses++;
 		else if(game.weight > this.weight)
 			game.losses++;
 	}
 	
-	private void sizeUtility(Game game){
+	private void utilityAttack(Game game){
 		if(this.utility > game.utility)
 			this.losses++;
 		else if(game.utility > this.utility)
