@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import com.coderef.jokenpo.entity.Game;
 import com.coderef.jokenpo.entity.Paper;
-import com.coderef.jokenpo.entity.Play;
+import com.coderef.jokenpo.service.Play;
 import com.coderef.jokenpo.entity.Scissors;
 import com.coderef.jokenpo.entity.Stone;
 

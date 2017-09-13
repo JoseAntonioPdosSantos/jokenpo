@@ -1,4 +1,6 @@
-package com.coderef.jokenpo.entity;
+package com.coderef.jokenpo.service;
+
+import com.coderef.jokenpo.entity.Game;
 
 public class WeightAttack extends Attack{
 

@@ -1,5 +1,7 @@
 package com.coderef.jokenpo.entity;
 
+import com.coderef.jokenpo.service.Attack;
+
 public abstract class Game {
 	
 	protected int size;
