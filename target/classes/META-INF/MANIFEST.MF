@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: jokenpo
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Kaenna Gualoa
+Built-By: Jotka
 Implementation-Vendor-Id: com.coderef
-Build-Jdk: 1.8.0_111
+Build-Jdk: 1.8.0_131
 Implementation-URL: http://projects.spring.io/spring-boot/jokenpo/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.

@@ -8,31 +8,13 @@ public abstract class Game {
 	private int losses;
 	
 	public Game attack(Game game){
-		sizeAttack(game);
-		weightAttack(game);
-		utilityAttack(game);
+		Attack.toAttack(this, game);
+		
 		return getWinner(game);
 	}
 	
-	private void sizeAttack(Game game){
-		if(this.size > game.size) 
-			this.losses++;
-		else if(game.size > this.size) 
-			game.losses++;
-	}
-	
-	private void weightAttack(Game game){
-		if(this.weight > game.weight)
-			this.losses++;
-		else if(game.weight > this.weight)
-			game.losses++;
-	}
-	
-	private void utilityAttack(Game game){
-		if(this.utility > game.utility)
-			this.losses++;
-		else if(game.utility > this.utility)
-			game.losses++;
+	public void addLosses(){
+		losses++;
 	}
 	
 	private Game getWinner(Game game){
