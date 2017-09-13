@@ -21,7 +21,7 @@ public abstract class Game {
 	
 	private Game getWinner(Game game){
 		if(this.losses == game.losses)
-			return new Tie();
+			return new Draw();
 		if(this.losses > game.losses)
 			return this;
 		else
