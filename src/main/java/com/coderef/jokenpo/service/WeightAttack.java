@@ -5,9 +5,9 @@ import com.coderef.jokenpo.entity.Game;
 public class WeightAttack extends Attack{
 
 	public WeightAttack(Game game1, Game game2) {
-		if(game1.weight > game2.weight) 
+		if(game1.getWeight() > game2.getWeight()) 
 			game1.addLosses();
-		else if(game2.weight > game1.weight) 
+		else if(game2.getWeight() > game1.getWeight()) 
 			game2.addLosses();
 	}
 

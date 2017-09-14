@@ -2,10 +2,6 @@ package com.coderef.jokenpo.entity;
 
 import com.coderef.jokenpo.service.Attack;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
-
 public abstract class Game {
 
     private Attack attack;
@@ -16,13 +12,10 @@ public abstract class Game {
 
 	public Game(){
 	    attack = new Attack();
-        init();
     }
 
-	public Game attack(Game game){
+	public void attack(Game game){
 		attack.toAttack(this, game);
-		attack.getWinner(this, game);
-		return null;
 	}
 	
 	public void addLosses(){
@@ -33,22 +26,16 @@ public abstract class Game {
 		return losses;
 	}
 
-	private void init(){
-        Properties properties = new Properties();
-        InputStream in = this.getClass().getResourceAsStream("resultGame.properties");
-        try {
-            properties.load(in);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            in.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+	public int getSize() {
+		return size;
+	}
 
-	public void getWinner(){
+	public int getWeight() {
+		return weight;
+	}
 
-    }
+	public int getUtility() {
+		return utility;
+	}
+
 }
