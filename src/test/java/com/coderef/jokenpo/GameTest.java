@@ -13,22 +13,6 @@ import com.coderef.jokenpo.service.Play;
 
 public class GameTest {
 
-	public static void main(String[] args) {
-		GameTest test = new GameTest();
-		test.startStoneXStone();
-		test.startPaperXPaper();
-		test.startScissorsXScissors();
-		
-		test.startStoneXPaper();
-		test.startPaperXStone();
-		
-		test.startStoneXScissors();
-		test.startScissorsXStone();
-		
-		test.startPaperXScissors();
-		test.startScissorsXPaper();
-	}
-	
 	@Test
 	public void startStoneXStone(){
 		
